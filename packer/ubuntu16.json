@@ -3,11 +3,11 @@
         "project_id": null,
         "source_image_family": null,
         "machine_type": "f1-micro",
-        "image_description": "",
+        "image_description": "Ubuntu 16.04 with Ruby and MongoDB",
         "disk_size": "10",
         "disk_type": "pd-standard",
         "network": "default",
-        "tags": "puma-server"
+        "tags": ""
       },
     "builders": [
         {

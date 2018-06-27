@@ -1,5 +1,5 @@
 {
-    "project_id": "infra-180627",
+    "project_id": "infra-207614",
     "source_image_family": "ubuntu-1604-lts",
-    "image_description": "Ubuntu 16.04 with Ruby and MongoDB"
+    "tags": "puma-server"
 }

@@ -5,6 +5,13 @@ provider "google" {
   zone    = "${var.zone}"
 }
 
+# добавление ssh-ключей в метадданные проекта
+resource "google_compute_project_metadata" "default" {
+  metadata {
+    ssh-keys = "appuser1:${file(var.public_key_path)} appuser2:${file(var.public_key_path)}"
+  }
+}
+
 resource "google_compute_instance" "app" {
   name         = "reddit-app"
   machine_type = "g1-small"

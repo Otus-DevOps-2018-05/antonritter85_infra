@@ -1,6 +1,14 @@
 # antonritter85_infra
 antonritter85 Infra repository
 
+## Homework-6
+
+#### В процессе сделано:
+
+#### Задание со *
+
+Terraform, после выполнения команды **terraform apply** удаляет ssh-ключ пользователя appuser_web, который был добавлен из веб-интерфейса.
+
 ## Homework-5
 
 #### В процессе сделано:

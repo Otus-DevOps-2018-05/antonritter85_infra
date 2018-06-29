@@ -2,6 +2,7 @@ provider "google" {
   version = "1.4.0"
   project = "${var.project}"
   region  = "${var.region}"
+  zone    = "${var.zone}"
 }
 
 resource "google_compute_instance" "app" {
@@ -35,7 +36,7 @@ resource "google_compute_instance" "app" {
     type        = "ssh"
     user        = "appuser"
     agent       = "false"
-    private_key = "${file("~/.ssh/appuser")}"
+    private_key = "${file(var.private_key_path)}"
   }
 
   provisioner "file" {

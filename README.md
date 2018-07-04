@@ -1,6 +1,42 @@
 # antonritter85_infra
 antonritter85 Infra repository
 
+## Homework-7 Terraform-2
+
+#### В процессе сделано:
+
+
+#### Задание со * (слайд 61)
+
+Настроен удаленный бекенд Terraform на Google Cloud Storage.\
+Файлы terraform.tfstate теперь отсутствует в локальной директории.\
+При попытке повторного применения конфигурации получаем следующую ошибку:
+
+```
+terraform apply -auto-approve
+Acquiring state lock. This may take a few moments...
+
+Error: Error locking state: Error acquiring the state lock: writing "gs://bucket-name/terraform/state/default.tflock" failed: googleapi: Error 412: Precondition Failed, conditionNotMet
+Lock Info:
+  ID:        1530703300181511
+  Path:      gs://bucket-name/terraform/state/default.tflock
+  Operation: OperationTypeApply
+  Who:       
+  Version:   0.11.7
+  Created:   2018-07-04 11:21:39.939498726 +0000 UTC
+  Info:
+
+
+Terraform acquires a state lock to protect the state from being written
+by multiple users at the same time. Please resolve the issue above and try
+again. For most commands, you can disable locking with the "-lock=false"
+flag, but this is not recommended.
+```
+
+#### Задание с ** (ответ на вопрос со слайда 51)
+
+При добавлении идентичных инстанстов код повторяется: теряется гибкость при модификации (создании, изменении, удалении) однотипных ресурсов, нарушается принцип DRY.
+
 ## Homework-6
 
 #### В процессе сделано:

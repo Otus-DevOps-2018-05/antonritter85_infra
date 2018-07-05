@@ -1,5 +1,5 @@
 {
-    "project_id": "infra-207614",
+    "project_id": "infra-180705",
     "source_image_family": "ubuntu-1604-lts",
     "tags": "puma-server"
 }

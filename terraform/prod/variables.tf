@@ -14,12 +14,12 @@ variable zone {
 
 variable app_machine_type {
   description = "Type of  virtual machine instance for app"
-  default     = "g1-small"
+  default     = "f1-micro"
 }
 
 variable db_machine_type {
   description = "Type of  virtual machine instance for db"
-  default     = "g1-small"
+  default     = "f1-micro"
 }
 
 variable public_key_path {
@@ -38,4 +38,9 @@ variable app_disk_image {
 variable db_disk_image {
   description = "Disk image for reddit DB"
   default     = "reddit-db-base"
+}
+
+variable reddit_db_ip {
+  description = "Internal IP address of reddit-db instance"
+  default     = "0.0.0.0"
 }

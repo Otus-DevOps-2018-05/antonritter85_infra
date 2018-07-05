@@ -19,6 +19,23 @@ resource "google_compute_instance" "db" {
     network       = "default"
     access_config = {}
   }
+
+  connection {
+    type        = "ssh"
+    host        = "${google_compute_instance.db.network_interface.0.access_config.0.assigned_nat_ip}"
+    user        = "appuser"
+    agent       = "false"
+    private_key = "${file(var.private_key_path)}"
+  }
+
+  provisioner "file" {
+    source      = "${path.module}/files/mongod.conf"
+    destination = "/tmp/mongod.conf"
+  }
+
+  provisioner "remote-exec" {
+    script = "${path.module}/files/mongo_conf.sh"
+  }
 }
 
 resource "google_compute_firewall" "firewall-mongo" {

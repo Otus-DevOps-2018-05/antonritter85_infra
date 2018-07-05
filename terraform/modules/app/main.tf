@@ -22,6 +22,10 @@ resource "google_compute_instance" "app" {
       nat_ip = "${google_compute_address.app_ip.address}"
     }
   }
+}
+
+resource "null_resource" "app" {
+  count = "${var.provisioners_enabled}"
 
   connection {
     type        = "ssh"

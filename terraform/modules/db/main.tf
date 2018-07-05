@@ -19,6 +19,10 @@ resource "google_compute_instance" "db" {
     network       = "default"
     access_config = {}
   }
+}
+
+resource "null_resource" "app" {
+  count = "${var.provisioners_enabled}"
 
   connection {
     type        = "ssh"

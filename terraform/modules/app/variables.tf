@@ -25,3 +25,7 @@ variable reddit_db_ip {
   description = "Internal IP address of reddit-db instance"
   default     = "0.0.0.0"
 }
+
+variable provisioners_enabled {
+  description = "Provisoners toggle"
+}

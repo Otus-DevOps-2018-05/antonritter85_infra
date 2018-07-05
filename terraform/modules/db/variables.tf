@@ -20,3 +20,7 @@ variable db_disk_image {
   description = "Disk image for reddit DB"
   default     = "reddit-db-base"
 }
+
+variable provisioners_enabled {
+  description = "Provisoners toggle"
+}

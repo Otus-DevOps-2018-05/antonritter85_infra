@@ -14,12 +14,12 @@ variable zone {
 
 variable app_machine_type {
   description = "Type of  virtual machine instance for app"
-  default     = "f1-micro"
+  default     = "g1-small"
 }
 
 variable db_machine_type {
   description = "Type of  virtual machine instance for db"
-  default     = "f1-micro"
+  default     = "g1-small"
 }
 
 variable public_key_path {

@@ -1,6 +1,18 @@
 # antonritter85_infra
 antonritter85 Infra repository
 
+## Homework-5
+
+#### В процессе сделано:
+
+ - создан и собран шаблон Packer (ubuntu16.json): Ubuntu 16.04 + Ruby + MongoDB
+ - созданный шаблон (ubuntu16.json) параметризован, с использованием пользовательских 
+    переменных (в самом шаблоне и в файле variables);
+ - на базе шаблона ubuntu16.json создан baked-шаблон (immutable.json): Ubuntu 16.04 + Ruby + 
+    MongoDB + Reddit App, при этом приложение запускает при старте инстанса (как systemd unit).
+ - создан скрипт create-reddit-vm.sh для создания и запуска машины из подготовленного образа 
+    из семейства reddit-full.
+
 ## Homework-4
 
 ### Дополнительное задание (слайд 20)

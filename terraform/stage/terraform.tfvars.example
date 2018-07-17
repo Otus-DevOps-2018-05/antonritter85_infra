@@ -1,0 +1,9 @@
+project = "infra-180629"
+
+region = "europe-west1"
+
+public_key_path = "~/.ssh/appuser.pub"
+
+private_key_path = "~/.ssh/appuser"
+
+provisioners_enabled = false

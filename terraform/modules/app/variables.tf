@@ -29,3 +29,11 @@ variable reddit_db_ip {
 variable provisioners_enabled {
   description = "Provisoners toggle"
 }
+
+variable reddit_app_tags {
+  description = "Tags for firewall rules of reddit app instance"
+
+  default = [
+    "reddit-app",
+  ]
+}

@@ -7,3 +7,8 @@ public_key_path = "~/.ssh/appuser.pub"
 private_key_path = "~/.ssh/appuser"
 
 provisioners_enabled = false
+
+reddit_app_tags = [
+  "reddit-app",
+  "http-server",
+]

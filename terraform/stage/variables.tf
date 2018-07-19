@@ -49,3 +49,11 @@ variable provisioners_enabled {
   description = "Provisoners toggle"
   default     = true
 }
+
+variable reddit_app_tags {
+  description = "Tags for firewall rules of reddit app instance"
+
+  default = [
+    "reddit-app",
+  ]
+}

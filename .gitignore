@@ -13,3 +13,6 @@ jdauphant.nginx
 
 # Ansible Vault key files
 vault.key
+
+# Mac OS ignored files
+.DS_Store

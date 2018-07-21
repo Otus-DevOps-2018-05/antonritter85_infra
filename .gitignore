@@ -16,3 +16,11 @@ vault.key
 
 # Mac OS ignored files
 .DS_Store
+
+# Vagrant & molecule
+.vagrant/
+*.log
+*.pyc
+.molecule
+.cache
+.pytest_cache

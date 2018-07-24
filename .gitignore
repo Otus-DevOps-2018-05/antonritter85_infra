@@ -10,6 +10,8 @@ gce.ini
 
 # Ansible community roles
 jdauphant.nginx
+db
+db.bak
 
 # Ansible Vault key files
 vault.key

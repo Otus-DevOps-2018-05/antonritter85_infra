@@ -2,7 +2,7 @@
 - name: Clone
   hosts: 
     - app
-    - reddit-app
+    - tag_reddit-app
   tasks:
     - name: Clone repo
       git:

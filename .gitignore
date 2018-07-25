@@ -1,6 +1,18 @@
+#Terraform ignored files and directories
 *.tfstate
 *.tfstate.*.backup
 *.tfstate.backup
 *.tfvars
 .terraform/
+
+# Google Compute Engine account settings for Ansible
 gce.ini
+
+# Ansible community roles
+jdauphant.nginx
+
+# Ansible Vault key files
+vault.key
+
+# Mac OS ignored files
+.DS_Store

@@ -13,7 +13,7 @@ resource "google_compute_instance" "app" {
     ssh-keys = "appuser:${file(var.public_key_path)}"
   }
 
-  tags = ["reddit-app"]
+  tags = "${var.reddit_app_tags}"
 
   network_interface {
     network = "default"

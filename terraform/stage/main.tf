@@ -13,6 +13,7 @@ module "app" {
   app_disk_image       = "${var.app_disk_image}"
   reddit_db_ip         = "${module.db.db_internal_ip}"
   provisioners_enabled = "${var.provisioners_enabled}"
+  reddit_app_tags      = "${var.reddit_app_tags}"
 }
 
 module "db" {

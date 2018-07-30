@@ -10,9 +10,23 @@ gce.ini
 
 # Ansible community roles
 jdauphant.nginx
+db
+db.bak
 
 # Ansible Vault key files
 vault.key
 
 # Mac OS ignored files
 .DS_Store
+
+# Vagrant & molecule
+.vagrant/
+*.log
+*.pyc
+.molecule
+.cache
+.pytest_cache
+*.retry
+
+# Python virtualenv
+venv

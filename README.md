@@ -1,6 +1,36 @@
 # antonritter85_infra
 antonritter85 Infra repository
 
+## Homework-11 Ansible-4
+
+#### В процессе сделано:
+
+- разработка при помощи Vagrant:
+  - установлен Vagrant;
+  - описана локальная инфраструктура в Vagrantfile и созданы описанные виртуальные машины;
+  - доработаны роли app и db с помощью провижинера Ansible в Vagrant;
+  - (Задание со *, слайд 49) дополнена конфигурация Vagrant для корректной работы проксирования приложения с помощью nginx;
+- тестирование ролей при помощи Molecule и Testinfra:
+  - установлены необходимые компоненты для тестирование в virtualenv: ansible, molecule, testinfra, python-vagrant;
+  - создана заготовка для тестов роли db в Vagrant;
+  - добавлены тесты (использованы модули Testinfra) в файл db/molecule/default/tests/test_default.py;
+  - описана (db/molecule/default/molecule.yml) и создана виртуальная машина для тестирование;
+  - выполены тесты с помощью Molecule:
+    - molecule converge;
+    - molecule verify;
+- образы Packer (reddit-app-base-*, reddit-db-base-*) пересобраны c использованием ролей app и db соответственно;
+- (Задание со *, слайд 63) вынесение роли в отдельный репозиторий:
+  - роль db удалена из текущего репозитория;
+  - роль db была вынесена в отдельный репозиторий [antonritter85/ansible-role-db](https://github.com/antonritter85/ansible-role-db);
+  - роль db подключена к текущему репозиторию через requirements.yml для окружений stage и prod;
+- (Задание со *, слайд 63) работа с репозиторием [antonritter85/ansible-role-db](https://github.com/antonritter85/ansible-role-db):
+  - подключен TravisCI;
+  - настроен автоматический прогон тестов в GCE с помощью Molecule:
+    - выполнена инициализация Molесule с помощью драйвера GCE;
+    - настроена интеграция TravisCI;
+  - добавлен бейдж со статусом билда;
+  - настроено оповещение о билда в Slack чат.
+
 ## Homework-10 Ansible-3
 
 #### В процессе сделано:
